@@ -4,8 +4,18 @@ import Person from '../assets/Person.svg'
 import Cart from '../assets/Cart.svg'
 import Likes from '../assets/Likes.svg'
 import HomeView from './HomeView/HomeView'
+import Basket from '../components/Basket/Basket'
+import { useState } from 'react'
 
 function App() {
+    const[open,setOpen] = useState<boolean>(false)
+
+
+    function Change(){
+
+        setOpen(false)
+        
+    }
   return (
     <div className='App'>
         <header className='header'>
@@ -20,7 +30,7 @@ function App() {
             </div>
             <div className="navBox">
                 <div className="cart">
-                    <img src={Cart} alt=''/>
+                    <img onClick={()=>setOpen(!open)} src={Cart} alt=''/>
                     <a href='/'>0p</a>
                 </div>
                 <div className="likes">
@@ -32,6 +42,12 @@ function App() {
                  <a href='/'>Профиль</a></div>
             </div>
         </header>
+        {
+        open?
+        <Basket open={Change}/>
+        :
+        null
+        }
         <section className='section'>
         <HomeView/>
         </section>

@@ -18,11 +18,7 @@ import sneaker11 from '../../assets/sneakers/sneakers-11.jpg'
 import sneaker12 from '../../assets/sneakers/sneakers-12.jpg'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-
-
-
 function HomeView() {
-
   const[cards,setCard] = useState<Array<ICard>>([])
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
   useEffect(()=>{
@@ -44,7 +40,6 @@ function HomeView() {
        
       ])
       enableAnimations(true)
-
   },[])
 
   return (
