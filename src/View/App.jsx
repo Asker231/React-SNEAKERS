@@ -4,27 +4,29 @@ import Person from '../assets/Person.svg'
 import Cart from '../assets/Cart.svg'
 import Likes from '../assets/Likes.svg'
 import HomeView from './HomeView/HomeView'
-import Basket from '../components/Basket/Basket'
+import Basket from '../components/Basket/Basket.jsx'
 import { useState } from 'react'
+import { Routes , Route} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import CardView from './CardView/CardView.jsx'
+
 
 function App() {
-    const[open,setOpen] = useState<boolean>(false)
+    const[open,setOpen] = useState(false)
 
 
     function Change(){
-
-        setOpen(false)
-        
+        setOpen(false)   
     }
   return (
     <div className='App'>
         <header className='header'>
             <div className="logoTypeBox">
-                <div className="logo">
+                <Link to="/" className="logo">
                     <img src={Logo} alt="logo" />
-                </div>
+                </Link>
                 <div className="title">
-                        <h3>REACT SNEAKERS</h3>
+                        <h3>SNEAKERS</h3>
                         <p>Магазин лучших кроссовок</p>
                 </div>
             </div>
@@ -49,7 +51,10 @@ function App() {
         null
         }
         <section className='section'>
-        <HomeView/>
+        <Routes>
+            <Route path='/' element={<HomeView/>}/>
+            <Route path='/:id' element={<CardView/>}/>
+        </Routes>
         </section>
     </div>
   )

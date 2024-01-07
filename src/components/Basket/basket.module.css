@@ -9,22 +9,24 @@
     right: 0px;
     z-index: 20;
     height:-webkit-fill-available
+
   
 }
 .basket{
     position:fixed;
     height:100%;
     width: 30%;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(255, 255, 255);
     top: 0px;
     right: 0px;
     z-index: 21;
     gap: 30px;
+    padding: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
-    justify-content: center;
+    justify-content: start;
 }
 .basket>img{
   width: 200px;
@@ -50,7 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    margin: 100px auto;
     justify-content: center;
 
   }
@@ -87,3 +89,99 @@
     cursor: pointer;
 
   }
+
+.hstack{
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding:4px;
+}
+.close{
+  width: 40px;
+  height: 40px;
+  background-color: #F2F2F2;
+  padding:5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s;
+}
+.close:hover{
+  background-color: red;
+  fill: white;
+}
+.close>img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.cards{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  padding:2px;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay{
+  color: #FFF;
+  text-align: center;
+  font-family: 'Inter',sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #9DD458;
+  padding: 19px;
+  width: 90%;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.item{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 5px;
+  border: 1px solid #F3F3F3;
+  border-radius: 12px;
+
+
+}
+.closes{
+  width: 40px;
+  height: 40px;
+  background-color: #F2F2F2;
+  padding:5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.imgs{
+  width: 70px;
+  height: 70px;
+}
+.imgs>img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.item>span{
+  color: #000;
+  font-family: 'Inter',sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
